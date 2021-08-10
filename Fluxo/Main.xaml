@@ -1,0 +1,230 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,4975.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="30">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="731.2,4910.4" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="688,4819.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" WorkbookPath="TabelaCodigos.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="676,4544.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="632.8,4453.6" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[Excel.Sheet(&quot;Planilha1&quot;)]" SaveAfterEachRow="False">
+              <ueab:ExcelForEachRow.Body>
+                <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="620.8,4264" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: home" sap:VirtualizedContainerService.HintSize="577.6,4172.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="565.6,3951.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '*Para consultas'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="522.4,226.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[CurrentRow.ByField(&quot;Código&quot;)]">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www2.correios.com.br/sistemas/rastreamento/default.cfm" DesignTimeRectangle="667, 463, 565, 149" ElementType="InputBox" FriendlyName="'TEXTAREA objetos'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjkAAACZCAYAAADNaCuqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAL1SURBVHhe7dbRCcJQEEVBqw2k/wIiD4yoKOrnHmbgwrIVnMsBABAkcgCAJJEDACTdI2ffdzMzM7PxOz1FDgDAZCIHAEgSOQBAksgBAJJEDgCQJHIAgCSRAwAkiRwAIEnkAABJIgcASBI5AECSyAEAkkQOAJAkcgCAJJEDACSJHAAgSeQAAEkiBwBIEjkAQJLIAQCSRA4AkCRyAIAkkQMAJIkcACBJ5AAASSIHAEgSOQBAksgBAJJEDgCQJHIAgCSRAwAkiRwAIEnkAABJIgcASBI5AECSyAEAkkQOAJAkcgCAJJEDACSJHAAgSeQAAEkiBwBIEjkAQJLIAQCSRA4AkCRyAIAkkQMAJIkcACBJ5AAASSIHAEgSOQBAksgBAJJEDgCQJHIAgCSRAwAkiRwAIEnkAABJIgcASBI5AECSyAEAkkQOAJAkcgCAJJEDACSJHAAgSeQAAEkiBwBIEjkAQJLIAQCSRA4AkCRyAIAkkQMAJIkcACBJ5AAASSIHAEgSOQBAksgBAJJEDgCQJHIAgCSRAwAkiRwAIEnkAABJIgcASBI5AECSyAEAkkQOAJAkcgCAJJEDACSJHAAgSeQAAEkiBwBIEjkAQJLIAQCSRA4AkCRyAIAkkQMAJIkcACBJ5AAASSIHAEgSOQBAksgBAJJEDgCQJHIAgCSRAwAkiRwAIEnkAABJIgcASBI5AECSyAEAkkQOAJAkcgCAJJEDACSJHAAgSeQAAEkiBwBIEjkAQJLIAQCSRA4AkCRyAIAkkQMAJIkcACBJ5AAASSIHAEgSOQBAksgBAJJEDgCQJHIAgCSRAwAkiRwAIEnkAABJIgcASBI5AECSyAEAkkQOAJAkcgCAJJEDACSJHAAgY9u22yVyAICIx8BZRA4AMN5r4CwiBwAY7V3gLCIHABjrU+AsIgcAGOld4Dz+RA4AMM63wFlEDgAwyi+Bs4gcAGCMXwNnETkAwAj/BM4icgCAJJEDACR9jBwzMzOz6TvdIwcAoOM4roKNYIcAob8ZAAAAAElFTkSuQmCC" InformativeScreenshot="908c7c65cb908a939a0b7d24cae91cf3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='home' /&gt;" SearchSteps="FuzzySelector, Image">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="667, 612, 465, 15" ElementType="Text" FriendlyName="'*Para consultas'" FullSelectorArgument="&lt;webctrl parentid='sroForm' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sroForm' tag='SPAN' type='' aaname='*Para consultas por CPF/CNPJ, será requisitado efetuar login no idCorreios.' check:text='*Para consultas por CPF/CNPJ, será requisitado efetuar login no idCorreios.' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="522.4,165.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www2.correios.com.br/sistemas/rastreamento/default.cfm" DesignTimeRectangle="1138, 647, 94, 31" ElementType="Button" FriendlyName="'Buscar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Buscar' check:text='Buscar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAjCAYAAABvod/HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALpSURBVGhD7ZrNaxNBFMA9qfhtRf8WRVSUiiKKFsUaCuJBoUEEEYTQIoIoeBCpYlriKbmW0paWJtF6SGnpx8WkXtzYU1roh6dA2l7HybzZ3Znd7YuHzBjqe/CD7ntv3izv16WX7mEULREkokWCRLRIeCLi8ThhGTU0ESfv9RGWQEWc6koSlsC/iNgHwhK4iM73hCVwEXffEZZARZy485awBCqi7fYbwhKoiOMdrwhL4CJuvSQsgYo4dvOFIfJsalNeFIjyt6j+3Q8q4uiNHkNkhYjqj6yen/wt7nYmldx/AiriyPWEISZAxOLEX+Z3P7iIa88NMS4XPt4wn1nhL7OyoPQEc3DGj2029dnvbVj/uiHzfvj3LzCn3r/o9mywjDe3ueAirj4zxBgsvDSm57+sM7a5xHqVXGaZv8zyvNan5oL13tK2MgPuUWeKOltnmfpzaolV64tOQc2vu7l5LkI/bwpUxOErTw0xygo1eVEo+JKUXlj0nHJWzck5gbpH6pdYdCEVUdsJ7cycEFEtjYb7mgwq4tDlJ4YYEQuslkYC+Vn4DayVWY/MwdJntT4tl+dfkRd8gQN+H9S4WPd5R+S9XrhzIO/kg/3NBxVxsP2xIYZBRHE4XMuv8dvXWFo+p+XS1Z6onDsTor5IngvMCjFQ5r/9EN67iJw83+6KUM4YAhVx4FK3IYakiKFwLSeXJ5/TFf5YmVF64KyeU1Fm9zuw1P6ovm6WKPK/BzWHJdS8uN89MwMickrdELiIi48MMSiXNdgwnyhu8bfZYoWk7MmtwgtWpr1++FnWkz/58t1+vA6zV1laq9XDPT8tRci6QXARFx4aQi4oIqrfuYRAv/gq3OBLha+EL1fUYVlqOFn1fPAuvuRPfl2bLWowD95DitDmmQEVsf/8A8ISqIh95+4TlkBF7D3bRVgCF3EmRlgCF3G6k7AEiWgRUBFtHa8JS6Aiov4jjTADLiL2kbAEKoKwixqeCIp/GYz9AW4F2NHxhu/vAAAAAElFTkSuQmCC" InformativeScreenshot="9869613eff268f7d415b134b95b5f7bc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='home' /&gt;" SearchSteps="FuzzySelector, Image">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="667, 612, 465, 15" ElementType="Text" FriendlyName="'*Para consultas'" FullSelectorArgument="&lt;webctrl parentid='sroForm' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sroForm' tag='SPAN' type='' aaname='*Para consultas por CPF/CNPJ, será requisitado efetuar login no idCorreios.' check:text='*Para consultas por CPF/CNPJ, será requisitado efetuar login no idCorreios.' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Saved.Values(Of System.Data.DataTable)(&quot;TabelaCorreios&quot;)]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Nova coluna 0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Nova coluna 1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='table' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='table' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='table' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="522.4,165.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="9, -173, 1899, 2293" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl tag='DIV' /&gt;" InformativeScreenshot="0745f0761d0dcb791a250b5d68807a08.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resultado' /&gt;" SearchSteps="Selector" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="522.4,3181.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="TabelaExtração.xlsx">
+                              <ueab:ExcelApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel2" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="510.4,2907.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ueab:WriteRangeX Destination="[Excel2.Sheet(&quot;Plan1&quot;)]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="467.2,164" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[Saved.Values(Of System.Data.DataTable)(&quot;TabelaCorreios&quot;)]" />
+                                    <ueab:ReadCellValueX Cell="[Excel2.Sheet(&quot;Plan1&quot;).Cell(&quot;A2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="467.2,163.2" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                                      <ueab:ReadCellValueX.SaveTo>
+                                        <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of UiPath.Excel.ExcelValue)("Status")]</OutArgument>
+                                      </ueab:ReadCellValueX.SaveTo>
+                                    </ueab:ReadCellValueX>
+                                    <ueab:ReadCellValueX Cell="[Excel2.Sheet(&quot;Plan1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="467.2,163.2" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                                      <ueab:ReadCellValueX.SaveTo>
+                                        <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of UiPath.Excel.ExcelValue)("Data/Hora/Cidade")]</OutArgument>
+                                      </ueab:ReadCellValueX.SaveTo>
+                                    </ueab:ReadCellValueX>
+                                    <ui:WriteTextFile DisplayName="Write Text File" FileName="Arquivo.txt" sap:VirtualizedContainerService.HintSize="467.2,132.8" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;Data/Hora/Cidade&quot;)]" />
+                                    <ui:TextToLeftRight DisplayName="Text to Left/Right" FullText="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;Data/Hora/Cidade&quot;)]" sap:VirtualizedContainerService.HintSize="467.2,244.8" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="[vbLf]" TextToLeft="[Saved.Values(Of System.String)(&quot;Data&quot;)]" TextToRight="[Saved.Values(Of System.String)(&quot;Hora/Cidade&quot;)]" />
+                                    <ui:TextToLeftRight DisplayName="Text to Left/Right" FullText="[Saved.Values(Of System.String)(&quot;Hora/Cidade&quot;)]" sap:VirtualizedContainerService.HintSize="467.2,244.8" sap2010:WorkflowViewState.IdRef="TextToLeftRight_2" Separator="[vbLf]" TextToLeft="[Saved.Values(Of System.String)(&quot;Hora&quot;)]" TextToRight="[Saved.Values(Of System.String)(&quot;Cidade&quot;)]" />
+                                    <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Status&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="467.2,163.2" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;Status&quot;)]" />
+                                    <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Data&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="467.2,163.2" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[Saved.Values(Of System.String)(&quot;Data&quot;)]" />
+                                    <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Hora&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="467.2,163.2" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[Saved.Values(Of System.String)(&quot;Hora&quot;)]" />
+                                    <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Cidade&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="467.2,163.2" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[Saved.Values(Of System.String)(&quot;Cidade&quot;)]" />
+                                    <umab:OutlookApplicationCard Account="amanda.borba@hdbsystems.com.br" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="467.2,649.6" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+                                      <umab:OutlookApplicationCard.Body>
+                                        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="455.2,460" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="[string.Format(&quot;{0}{1}{2}{3} às {4}{5}em {6}&quot;, CurrentRow.ByField(&quot;Status&quot;), Environment.NewLine, Environment.NewLine, CurrentRow.ByField(&quot;Data&quot;), CurrentRow.ByField(&quot;Hora&quot;), Environment.NewLine, CurrentRow.ByField(&quot;Cidade&quot;))]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="412,368" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[string.Format(&quot;Status do objto {0}: {1} às {2}&quot;, CurrentRow.ByField(&quot;Código&quot;), CurrentRow.ByField(&quot;Data&quot;), CurrentRow.ByField(&quot;Hora&quot;))]" To="[CurrentRow.ByField(&quot;E-mail&quot;)]" UseDocumentAsBody="False">
+                                              <umab:SendMailX.Files>
+                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                              </umab:SendMailX.Files>
+                                              <umab:SendMailX.HtmlBodyFromFile>
+                                                <umabh:HtmlContentArgument FilePath="{x:Null}">
+                                                  <umabh:HtmlContentArgument.RuntimeImages>
+                                                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                  </umabh:HtmlContentArgument.RuntimeImages>
+                                                  <umabh:HtmlContentArgument.ValueMappings>
+                                                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                  </umabh:HtmlContentArgument.ValueMappings>
+                                                </umabh:HtmlContentArgument>
+                                              </umab:SendMailX.HtmlBodyFromFile>
+                                            </umab:SendMailX>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </umab:OutlookApplicationCard.Body>
+                                    </umab:OutlookApplicationCard>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelApplicationCard.Body>
+                            </ueab:ExcelApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAR4SURBVFhH5ZR9TNR1HMc59Q9UaKk8RIdAgZaK2h8txyqjcj2s5XLTNhQjlblWVq5pqBjDslCINBCVgADrcBcPnSA3OdF4EiQlUOLhjuN4fhC4CO8g7ry7d/w+9+MeuN+x6d1qrff2+ee29+/7+n1e3/u54F/Ofxcg5/J1nMovxak8CZJzS5AsFJsnp5AmvVoKkfRPjGt1bMs2DgDUwH3Dbri9tAsLQyOwcH04FjwbhvkhW+C6bhNcn34Tbi9sxZqcbmw53watTs82reOQgs3RybMDhG7DU3l9WPGdDN9e62db1nEIoOeOEvyNH9oFCPpShLXCbtpC8OlmNN8ZZ5vmOHwJs4rLOQG8wmMQnC3FaoECa3/qxarsDmwSyGxUOAzAZOO+eCsAt9BwrEi5jpXpjQTBbIGBYFSk1AywLWOcAtDZP4RHXos0AQQcEuCJ5NqpA29hVUYTgn+Y2gKrYs3ZFkiHJ9imkwCYpBZICMAz7DCWJVZg+clqPJlSRxAzVVj+K5wGwDzwjX0JePwLMQLjSq0gplUwG2AgVqa3IatuiHqcAAa9FrrBWOjlq6FXLDONoWs596jF1NsvbkJATCFBBB2/ShCk4my9jYrE2mHqcALcG4iD9jaPRt88NTLzGOTWo+97lToVnUr4H8yFf3Q+HostQuBXEgTFl1mryGwlFa8UDWBMY0eBbvx3jNctwESdBYAFhNXhiodg0LZDpbmHkGMX4PtJNvyihAg4/POsKsr6zN8DKwBm9aqGEKhqXUwAs0KMplDvQMGv8PkgFb57M7F0fw5twp6Kg+W91JmOFYC6IwHKch7GqnncECwATc+LBFwlH4DP7iT4vHcaj+5Joy0QxJQKBsJSxfOZDVBOaNjTjDEBaO+2ou+SG4au8EwQ6hs8bhVt7jBopFBrtHgmKg1eOxJMEPyPMkwq/GeoKJGPsKeZQwDMm/ReXY+uQh76S3gmCHsqDMoTVD70owQeYZ/Dc3scvHcmGiGmVPA5VHx8oZE6M0MAo7IktAjmQpHLQ/dFF4Kwq6LjOQKuaemEx+ZoLHk7Bh5bj8Iz4ji8I09wqlj3tcRm9dMhAGXlYsiEcyA9PweKAh56xeYtWKqYrJ8LnbqBikfOFWPbsWyExwuwPVGId07mIyJZhHfPXMSO1EvYmV6KyKxyRIvqoBhRUYcrBDApf4sObRHMIxAuFQxE67lFaC+Np6KzYrwD2l6obiyht7enYrDEFZcP8FEW6wdV/20qOyMEwESnzKLD7KmoOOIDyad8/PKZD35L20D3wBkxATDRyF+nt2a2YKmiMXUxxHuXmgAqj3qj51oi23IsVgAGbRfUNxehQ2S8D4yKzvz5KN7jZwNQ+40vxoeb2OaDxwqAiU6ZblLRnjcPV6L4KHrfFqAmwRPNwpcdVmEDwGRaRfP37hDt8rcLcDPpYQzWGz9KDxpOAFLREEjrF0XODnArwwt/jbawzfsPJwATg14N7WgVxrqqMCKrpvlDYRzmN2ZUfZU0k3cVbOv+Yxfgn8r/HQD4G6k5ly2JFjJFAAAAAElFTkSuQmCC" InformativeScreenshot="e2bbfc8b0febec68701cb9f78dd10c2a.png" Selector="&lt;html app='chrome.exe' title='home'/&gt;" Url="https://www2.correios.com.br/sistemas/rastreamento/default.cfm" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelForEachRow.Body>
+            </ueab:ExcelForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+  </ueab:SequenceX>
+</Activity>
